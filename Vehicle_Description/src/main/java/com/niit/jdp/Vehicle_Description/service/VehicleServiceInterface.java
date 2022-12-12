@@ -14,6 +14,6 @@ public interface VehicleServiceInterface {
 
     Optional<Vehicle> getVehicleById(int vehicleId);
 
-    void deleteVehicleById(int vehicleId);
+    boolean deleteVehicleById(int vehicleId);
 
 }

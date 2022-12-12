@@ -59,8 +59,9 @@ public class VehicleService implements VehicleServiceInterface {
     }
 
     @Override
-    public void deleteVehicleById(int vehicleId) {
+    public boolean deleteVehicleById(int vehicleId) {
         vehicleRepository.deleteById(vehicleId);
+        return true;
     }
 
 }
