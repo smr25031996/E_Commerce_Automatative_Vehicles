@@ -7,18 +7,20 @@ import javax.persistence.Id;
 public class User {
     @Id
     private int userId;
-    private String Name;
+    private String name;
     private String LastName;
     private String email;
     private String password;
     private long mobileNumber;
+
+    private String gender;
 
     public User() {
     }
 
     public User(int userId, String name, String lastName, String email, String password, long mobileNumber) {
         this.userId = userId;
-        Name = name;
+        this.name = name;
         LastName = lastName;
         this.email = email;
         this.password = password;
@@ -29,7 +31,7 @@ public class User {
     public String toString() {
         return "User{" +
                 "userId=" + userId +
-                ", Name='" + Name + '\'' +
+                ", Name='" + name + '\'' +
                 ", LastName='" + LastName + '\'' +
                 ", email='" + email + '\'' +
                 ", password='" + password + '\'' +
@@ -46,11 +48,11 @@ public class User {
     }
 
     public String getName() {
-        return Name;
+        return name;
     }
 
     public void setName(String name) {
-        Name = name;
+        this.name = name;
     }
 
     public String getLastName() {
