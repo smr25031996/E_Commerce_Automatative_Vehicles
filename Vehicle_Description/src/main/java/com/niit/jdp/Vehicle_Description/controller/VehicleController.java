@@ -1,6 +1,7 @@
 package com.niit.jdp.Vehicle_Description.controller;
 
 import com.niit.jdp.Vehicle_Description.domain.Vehicle;
+import com.niit.jdp.Vehicle_Description.execption.VehicleAlreadyExists;
 import com.niit.jdp.Vehicle_Description.service.VehicleServiceInterface;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -18,7 +19,7 @@ public class VehicleController {
     }
 
     @PostMapping("/vehicle")
-    public ResponseEntity<?> addVehicle(@RequestBody Vehicle vehicle) {
+    public ResponseEntity<?> addVehicle(@RequestBody Vehicle vehicle) throws VehicleAlreadyExists {
         return new ResponseEntity<>(vehicleServiceInterface.addVehicle(vehicle), HttpStatus.CREATED);
     }
 

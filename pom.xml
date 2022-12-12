@@ -14,6 +14,7 @@
   </packaging>
   <modules>
     <module>Vehicle_Description</module>
+    <module>SignInService</module>
   </modules>
 
   <name>E_Commerce_Automotive_Vehicles</name>
