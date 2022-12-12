@@ -12,9 +12,8 @@
   <version>1.0-SNAPSHOT</version>
   <packaging>pom</packaging>
   <modules>
-    <module>Vehicle_Description</module>
-    <module>SignInService</module>
-    <module>authenticatictionService</module>
+    <module>authenticationService</module>
+    <module>VehicleDescriptionService</module>
   </modules>
 
   <name>E_Commerce_Automotive_Vehicles</name>
