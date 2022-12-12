@@ -10,8 +10,10 @@ public interface VehicleServiceInterface {
 
     List<Vehicle> getAllVehicles();
 
-    Vehicle updateVehicleInfo(Vehicle vehicle);
+    Vehicle updateVehicleInfo(Vehicle vehicle, int vehicleId);
 
     Optional<Vehicle> getVehicleById(int vehicleId);
+
+    void deleteVehicleById(int vehicleId);
 
 }

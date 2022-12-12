@@ -29,12 +29,38 @@ public class VehicleService implements VehicleServiceInterface {
     }
 
     @Override
-    public Vehicle updateVehicleInfo(Vehicle vehicle) {
-        return null;
+    public Vehicle updateVehicleInfo(Vehicle vehicle, int vehicleId) {
+        Optional<Vehicle> optUser = vehicleRepository.findById(vehicleId);
+        if (optUser.isEmpty()) {
+            return null;
+        }
+        Vehicle vehicle1 = optUser.get();
+        if (vehicle.getVehicleName() != null) {
+            vehicle1.setVehicleName(vehicle.getVehicleName());
+        }
+        if (vehicle.getCompany() != null) {
+            vehicle1.setCompany(vehicle.getCompany());
+        }
+        if (vehicle.getPrice() != 0) {
+            vehicle1.setPrice(vehicle.getPrice());
+        }
+
+        if (vehicle.getColor() != null) {
+            vehicle1.setColor(vehicle.getColor());
+        }
+
+        return vehicleRepository.save(vehicle1);
     }
+
 
     @Override
     public Optional<Vehicle> getVehicleById(int vehicleId) {
         return vehicleRepository.findById(vehicleId);
     }
+
+    @Override
+    public void deleteVehicleById(int vehicleId) {
+        vehicleRepository.deleteById(vehicleId);
+    }
+
 }
