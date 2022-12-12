@@ -3,6 +3,7 @@ package com.niit.jdp.Vehicle_Description.service;
 import com.niit.jdp.Vehicle_Description.domain.Vehicle;
 
 import java.util.List;
+import java.util.Optional;
 
 public interface VehicleServiceInterface {
     Vehicle addVehicle(Vehicle vehicle);
@@ -11,6 +12,6 @@ public interface VehicleServiceInterface {
 
     Vehicle updateVehicleInfo(Vehicle vehicle);
 
-    Vehicle getVehicleById(int vehicleId);
+    Optional<Vehicle> getVehicleById(int vehicleId);
 
 }
