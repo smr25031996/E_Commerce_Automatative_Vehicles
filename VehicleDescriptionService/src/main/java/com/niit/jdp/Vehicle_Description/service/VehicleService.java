@@ -1,6 +1,8 @@
 package com.niit.jdp.Vehicle_Description.service;
 
 import com.niit.jdp.Vehicle_Description.domain.Vehicle;
+import com.niit.jdp.Vehicle_Description.execption.VehicleAlreadyExists;
+import com.niit.jdp.Vehicle_Description.execption.VehicleNotFound;
 import com.niit.jdp.Vehicle_Description.repository.VehicleRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -19,7 +21,10 @@ public class VehicleService implements VehicleServiceInterface {
     }
 
     @Override
-    public Vehicle addVehicle(Vehicle vehicle) {
+    public Vehicle addVehicle(Vehicle vehicle) throws VehicleAlreadyExists {
+        if (vehicleRepository.findById(vehicle.getVehicleID()).isPresent()) {
+            throw new VehicleAlreadyExists();
+        }
         return vehicleRepository.save(vehicle);
     }
 
@@ -59,9 +64,18 @@ public class VehicleService implements VehicleServiceInterface {
     }
 
     @Override
-    public boolean deleteVehicleById(int vehicleId) {
-        vehicleRepository.deleteById(vehicleId);
-        return true;
+    public boolean deleteVehicleById(int vehicleId) throws VehicleNotFound {
+        boolean flag;
+        if (vehicleRepository.findById(vehicleId).isEmpty()) {
+            throw new VehicleNotFound();
+
+        } else {
+            vehicleRepository.deleteById(vehicleId);
+            flag = true;
+        }
+        return flag;
+
+
     }
 
 }
