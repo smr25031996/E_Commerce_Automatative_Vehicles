@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.niit.jdp</groupId>
-    <artifactId>VehicleDescriptionService</artifactId>
+    <artifactId>vehicleDescriptionService</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>Vehicle_Description</name>
     <description>Demo project for Spring Boot</description>

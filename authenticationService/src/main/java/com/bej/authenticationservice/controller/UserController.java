@@ -59,7 +59,6 @@ public class UserController {
     return responseEntity = new ResponseEntity("User Created", HttpStatus.CREATED);
   }
 
-
   @GetMapping("/api/v1/userservice/users")
   public ResponseEntity getAllUsers() throws UserNotFoundException {
 
@@ -68,6 +67,4 @@ public class UserController {
     return responseEntity;
 
   }
-
-
 }

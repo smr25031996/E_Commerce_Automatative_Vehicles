@@ -13,7 +13,7 @@
   <packaging>pom</packaging>
   <modules>
     <module>authenticationService</module>
-    <module>VehicleDescriptionService</module>
+    <module>vehicleDescriptionService</module>
   </modules>
 
   <name>E_Commerce_Automotive_Vehicles</name>
