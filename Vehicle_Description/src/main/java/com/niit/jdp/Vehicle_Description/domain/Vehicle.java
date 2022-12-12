@@ -4,7 +4,7 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document
-public class AutomotiveVehicle {
+public class Vehicle {
     @Id
     private int vehicleID;
     private String vehicleName;
@@ -12,10 +12,10 @@ public class AutomotiveVehicle {
     private double price;
     private String color;
 
-    public AutomotiveVehicle() {
+    public Vehicle() {
     }
 
-    public AutomotiveVehicle(int vehicleID, String vehicleName, String company, double price, String color) {
+    public Vehicle(int vehicleID, String vehicleName, String company, double price, String color) {
         this.vehicleID = vehicleID;
         this.vehicleName = vehicleName;
         this.company = company;
