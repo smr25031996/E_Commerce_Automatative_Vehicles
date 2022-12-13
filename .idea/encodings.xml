@@ -2,7 +2,9 @@
 <project version="4">
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/SignInService/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/authenticatictionService/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/authenticationService/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springCloudAPIGateway/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/vehicleDescriptionService/src/main/java" charset="UTF-8" />
