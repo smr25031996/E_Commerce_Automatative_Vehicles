@@ -1,6 +1,5 @@
 package com.bej.authenticationservice.controller;
 
-
 import com.bej.authenticationservice.domain.User;
 import com.bej.authenticationservice.exception.UserNotFoundException;
 import com.bej.authenticationservice.service.SecurityTokenGenerator;
@@ -12,8 +11,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Map;
-
-
+@CrossOrigin
 @RestController
 @RequestMapping("/api/v1/")
 public class UserController {
@@ -34,7 +32,7 @@ public class UserController {
   @PostMapping("/login")
   public ResponseEntity loginUser(@RequestBody User user) throws UserNotFoundException {
 
-    Map<String, String> map = null;
+      Map<String, Object> map = null;
     try {
       User userObj = userService.findByUsernameAndPassword(user.getUsername(), user.getPassword());
       if (userObj.getUsername().equals(user.getUsername())) {
@@ -52,7 +50,6 @@ public class UserController {
   // first step - register the user
   @PostMapping("/register")
   public ResponseEntity saveUser(@RequestBody User user) {
-
     User createdUser = userService.saveUser(user);
     return responseEntity = new ResponseEntity("User Created", HttpStatus.CREATED);
   }
@@ -66,6 +63,5 @@ public class UserController {
     return responseEntity;
 
   }
-
 
 }

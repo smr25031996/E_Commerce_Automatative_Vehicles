@@ -17,7 +17,6 @@ public class UserServiceImpl implements UserService {
     @Autowired
     public UserServiceImpl(UserRepository userRepository) {
         this.userRepository = userRepository;
-
     }
 
 
@@ -35,6 +34,7 @@ public class UserServiceImpl implements UserService {
         return user;
 
     }
+
 
     @Override
     public List<User> getAllUsers() {

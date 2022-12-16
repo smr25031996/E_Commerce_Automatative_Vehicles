@@ -14,6 +14,5 @@ public interface UserService {
 
     List<User> getAllUsers();
 
-//  boolean validateUser(String username, String password) throws UserNotFoundException;
 
 }
