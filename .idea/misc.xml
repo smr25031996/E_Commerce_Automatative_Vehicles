@@ -12,6 +12,7 @@
       <set>
         <option value="$PROJECT_DIR$/SignInService/pom.xml" />
         <option value="$PROJECT_DIR$/authenticationService/pom.xml" />
+        <option value="$PROJECT_DIR$/springCloudAPIGateway/pom.xml" />
       </set>
     </option>
   </component>

@@ -54,7 +54,6 @@ public class UserController {
     return responseEntity = new ResponseEntity("User Created", HttpStatus.CREATED);
   }
 
-
   @GetMapping("/userservice/users")
   public ResponseEntity getAllUsers() throws UserNotFoundException {
 

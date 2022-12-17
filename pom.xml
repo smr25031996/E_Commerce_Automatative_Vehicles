@@ -14,7 +14,6 @@
   <modules>
     <module>authenticatictionService</module>
     <module>vehicleDescriptionService</module>
-    <module>springCloudAPIGateway</module>
   </modules>
 
   <name>E_Commerce_Automotive_Vehicles</name>
